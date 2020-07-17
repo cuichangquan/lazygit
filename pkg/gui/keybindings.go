@@ -880,6 +880,12 @@ func (gui *Gui) GetInitialKeybindings() []*Binding {
 		},
 		{
 			ViewName:    "commitFiles",
+			Key:         gui.getKey("universal.edit"),
+			Handler:     gui.handleCommitFileEdit,
+			Description: gui.Tr.SLocalize("editFile"),
+		},
+		{
+			ViewName:    "commitFiles",
 			Key:         gui.getKey("universal.openFile"),
 			Handler:     gui.handleOpenOldCommitFile,
 			Description: gui.Tr.SLocalize("openFile"),

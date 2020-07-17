@@ -119,6 +119,11 @@ func (gui *Gui) refreshCommitFilesView() error {
 	return gui.handleCommitFileSelect(gui.g, commitsFileView)
 }
 
+func (gui *Gui) handleCommitFileEdit(g *gocui.Gui, v *gocui.View) error {
+	file := gui.getSelectedCommitFile()
+	return gui.editFile(file.Name)
+}
+
 func (gui *Gui) handleOpenOldCommitFile(g *gocui.Gui, v *gocui.View) error {
 	file := gui.getSelectedCommitFile()
 	return gui.openFile(file.Name)

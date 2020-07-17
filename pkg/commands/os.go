@@ -229,6 +229,7 @@ func (c *OSCommand) OpenLink(link string) error {
 	return err
 }
 
+// 分析対象
 // EditFile opens a file in a subprocess using whatever editor is available,
 // falling back to core.editor, VISUAL, EDITOR, then vi
 func (c *OSCommand) EditFile(filename string) (*exec.Cmd, error) {
